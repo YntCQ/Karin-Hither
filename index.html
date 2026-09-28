@@ -176,9 +176,9 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .hero-in{
   position:relative;z-index:1;max-width:1320px;margin-inline:auto;
   min-height:100vh;min-height:100svh;
-  padding:clamp(40px,7svh,110px) clamp(30px,6vw,100px) clamp(130px,17svh,160px);
+  padding:clamp(34px,5.5svh,90px) clamp(30px,6vw,100px) clamp(18px,3svh,40px);
   display:grid;justify-items:center;align-content:center;text-align:center;
-  grid-template-areas:"eyebrow" "names" "civil" "photo" "facts";
+  grid-template-areas:"eyebrow" "names" "civil" "photo" "facts" "cue";
 }
 .hero-civil{
   grid-area:civil;display:flex;align-items:center;gap:clamp(12px,1.6vw,20px);margin-top:clamp(14px,2.4svh,30px);
@@ -190,14 +190,14 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .hero-eyebrow::before,.hero-eyebrow::after{content:"";width:clamp(28px,4vw,56px);height:1px;background:var(--champ)}
 .hero-names{
   grid-area:names;margin-top:clamp(10px,2svh,26px);display:grid;
-  font:400 min(19vw,8.5svh,9.6rem)/.92 var(--script);color:var(--burdeos);
+  font:400 min(17vw,7.4svh,9.6rem)/.92 var(--script);color:var(--burdeos);
 }
 .hero-names span:first-child{transform:translateX(-.25em)}
 .hero-names span:last-child{transform:translateX(.3em)}
 .hero-names .amp{font:italic 400 .42em/1 var(--serif);color:var(--oro);margin-block:.05em}
 .hero-photo{
   grid-area:photo;position:relative;margin-top:clamp(20px,3.5svh,44px);
-  width:clamp(160px,calc((100svh - 620px) * .8),min(62vw,440px));
+  width:clamp(150px,calc((100svh - 580px) * .8),min(62vw,440px));
 }
 .arch-wrap{position:relative}
 .arch{position:relative;width:100%;aspect-ratio:4/5;border-radius:50% 50% 0 0 / 40% 40% 0 0}
@@ -247,9 +247,8 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 
 /* Guía para deslizar */
 .scroll-cue{
-  position:fixed;z-index:30;left:50%;bottom:calc(clamp(12px,2.2svh,24px) + env(safe-area-inset-bottom,0px));translate:-50% 0;
-  display:grid;justify-items:center;gap:4px;padding:8px 22px 0;transition:opacity .6s,visibility .6s;
-  background:radial-gradient(closest-side,rgba(248,241,214,.85),rgba(248,241,214,0));
+  grid-area:cue;position:relative;z-index:3;margin-top:clamp(14px,2.4svh,30px);
+  display:grid;justify-items:center;gap:4px;transition:opacity .6s,visibility .6s;
 }
 .scroll-cue.hide{opacity:0;visibility:hidden}
 .scroll-cue p{font:400 clamp(1.5rem,2.4vw,1.9rem)/1 var(--script);color:var(--burdeos)}
@@ -267,9 +266,10 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 @media (min-width:960px){
   .hero-in{
     grid-template-columns:1.05fr .95fr;column-gap:clamp(40px,6vw,110px);align-content:center;
-    grid-template-areas:"eyebrow photo" "names photo" "civil photo" "lead photo" "facts photo";
+    grid-template-areas:"eyebrow photo" "names photo" "civil photo" "lead photo" "facts photo" "cue cue";
     justify-items:start;text-align:left;
   }
+  .scroll-cue{justify-self:center}
   .hero .lead{display:block}
   .hero-names{font-size:min(9.6rem,15svh)}
   .hero-eyebrow::after{display:none}
@@ -277,7 +277,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   .hero-names span:last-child{transform:translateX(.9em)}
   .hero-names .amp{padding-left:1.1em}
   .hero-civil i:first-child{display:none}
-  .hero-photo{grid-row:1 / span 5;align-self:center;justify-self:end;margin-top:0;width:clamp(260px,calc((100svh - 260px) * .8),440px)}
+  .hero-photo{grid-row:1 / span 5;align-self:center;justify-self:end;margin-top:0;width:clamp(260px,calc((100svh - 330px) * .8),440px)}
   .hero-facts{align-self:start}
   .hero-facts div:first-child{padding-left:0}
 }
@@ -496,13 +496,13 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
       <div><dt>Hora</dt><dd>12:00 PM<small>(Mediodía)</small></dd></div>
       <div><dt>Lugar</dt><dd>Salón de eventos Makora<small>Andahuaylas</small></dd></div>
     </dl>
-  </div>
-  <div class="scroll-cue" id="scrollCue">
-    <p>Desliza</p>
-    <span class="cue-line" aria-hidden="true"></span>
-    <button class="cue-btn" id="cueBtn" aria-label="Ir a la siguiente sección">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
-    </button>
+    <div class="scroll-cue hide" id="scrollCue">
+      <p>Desliza</p>
+      <span class="cue-line" aria-hidden="true"></span>
+      <button class="cue-btn" id="cueBtn" aria-label="Ir a la siguiente sección">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -676,7 +676,7 @@ function openInvite(withMusic){
     musicBtn.hidden = !audioOk;
     startBloom();
     petals();
-    cue.hidden = false;
+    cueReady = true; cue.classList.toggle("hide", scrollY > 60);
   }, reduce ? 50 : 1700);
   setTimeout(() => { opener.hidden = true; }, reduce ? 100 : 2900);
 }
@@ -686,8 +686,8 @@ $("#hint").addEventListener("click", () => openInvite(true));
 /* Guía "Desliza": lleva a la siguiente sección y se oculta al deslizar */
 const cue = $("#scrollCue");
 $("#cueBtn").addEventListener("click", () => $(".quote").scrollIntoView({behavior: reduce ? "auto" : "smooth"}));
-addEventListener("scroll", () => cue.classList.toggle("hide", scrollY > 60), {passive: true});
-cue.hidden = true;   // aparece recién al abrir el sobre
+let cueReady = false;   // se muestra recién al abrir el sobre
+addEventListener("scroll", () => { if (cueReady) cue.classList.toggle("hide", scrollY > 60); }, {passive: true});
 $("#noMusic").addEventListener("click", () => openInvite(false));
 audio.addEventListener("error", () => { musicBtn.hidden = true; });
 musicBtn.addEventListener("click", () => {
