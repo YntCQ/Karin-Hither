@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Karin & Hitler</title>
-<meta name="description" content="Nos casamos · Sábado 24 de octubre de 2026 · Salón de eventos Mankora, Andahuaylas">
-<meta property="og:title" content="Karin & Hitler · 24.10.26">
+<title>Karin & Hither</title>
+<meta name="description" content="Matrimonio civil · Sábado 24 de octubre de 2026, 12:00 (mediodía) · Salón de eventos Makora, Av. Santa Cruz 535, Andahuaylas">
+<meta property="og:title" content="Karin & Hither · 24.10.26">
 <meta property="og:description" content="Tenemos el honor de invitarte a celebrar nuestra boda.">
 <meta property="og:image" content="img/portada.jpg">
 <meta name="theme-color" content="#4D0011">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Great+Vibes&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap">
 <style>
 /* ========= Paleta ========= */
 :root{
@@ -24,8 +24,9 @@
   --vino:#4D0011;
   --blush:#EAC7B4;
   --tinta:#3B0A14;
-  --script:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;
-  --serif:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --script:"Great Vibes","Snell Roundhand","Apple Chancery",cursive;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --num:"Cormorant Garamond","Garamond",Georgia,serif;
   --sans:"Jost","Futura","Century Gothic","Segoe UI",sans-serif;
   --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.05 0 0 0 0 0.1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -44,7 +45,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .dark{background:var(--vino) var(--grain);color:var(--crema)}
 .eyebrow{font:500 clamp(.78rem,1vw,.95rem)/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--oro)}
 .dark .eyebrow{color:var(--champ)}
-.h2{font:italic 400 clamp(2.5rem,7vw,4.6rem)/1.05 var(--serif);color:var(--burdeos);text-wrap:balance;margin-top:14px}
+.h2{font:italic 500 clamp(2.4rem,6.6vw,4.4rem)/1.1 var(--serif);color:var(--burdeos);text-wrap:balance;margin-top:14px}
 .dark .h2{color:var(--crema)}
 .lead{max-width:34ch;margin-top:18px;text-wrap:pretty}
 .center{text-align:center}
@@ -93,7 +94,8 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .op-flap line{stroke:var(--champ);stroke-width:1.2;opacity:.75;vector-effect:non-scaling-stroke}
 .op-date{
   position:absolute;left:0;right:0;top:32%;text-align:center;
-  font:400 clamp(.8rem,1.3vw,1.05rem)/1 var(--sans);letter-spacing:.5em;padding-left:.5em;color:rgba(248,241,214,.8);
+  font:500 clamp(1.15rem,1.8vw,1.5rem)/1 var(--num);letter-spacing:.35em;padding-left:.35em;color:rgba(248,241,214,.85);
+  font-variant-numeric:lining-nums;
 }
 .seal{
   position:absolute;left:50%;top:var(--tip);z-index:4;width:var(--seal);aspect-ratio:1;
@@ -109,10 +111,26 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   display:grid;justify-items:center;text-align:center;padding-inline:16px;
   transition:opacity .5s;
 }
-.op-names{font:400 clamp(3rem,6.6vw,6rem)/1.1 var(--script);color:#EBD2A8;text-shadow:0 2px 18px rgba(0,0,0,.35)}
-.op-names i{font-style:normal;font-size:.62em;padding-inline:.15em}
-.op-hint{margin-top:clamp(18px,4vh,40px);font:400 clamp(.72rem,1.1vw,.95rem)/1.4 var(--sans);letter-spacing:.42em;text-transform:uppercase;color:rgba(219,190,155,.6)}
-.linkbtn{margin-top:clamp(16px,3.5vh,36px);background:none;border:0;padding:6px 4px;font:300 clamp(.95rem,1.2vw,1.1rem)/1 var(--sans);color:var(--champ);cursor:pointer;text-decoration:underline;text-underline-offset:7px;text-decoration-thickness:1px}
+.op-hint{
+  position:absolute;z-index:4;left:50%;translate:-50% 0;
+  bottom:calc(100% - var(--tip) + var(--seal) / 2 + clamp(12px,2.2vh,22px));
+  display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer;
+  color:var(--crema);white-space:nowrap;animation:hint 2.2s ease-in-out infinite;transition:opacity .4s;
+}
+.opener.opening .op-hint{opacity:0;animation:none}
+.op-hint svg{width:20px;height:20px;color:var(--champ)}
+.op-hint span{
+  display:inline-block;padding:9px 20px;border-radius:999px;
+  font:500 clamp(.74rem,1.1vw,.9rem)/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(219,190,155,.16);border:1px solid rgba(219,190,155,.75);
+  box-shadow:0 0 0 0 rgba(219,190,155,.5);animation:glow 2.2s ease-out infinite;
+}
+.op-hint:hover span{background:rgba(219,190,155,.3)}
+@keyframes hint{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(219,190,155,.55)}100%{box-shadow:0 0 0 16px rgba(219,190,155,0)}}
+.op-names{font:400 clamp(2.8rem,6.2vw,5.6rem)/1.15 var(--script);color:#EBD2A8;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.op-names i{font-style:normal;font-size:.7em;padding-inline:.12em}
+.linkbtn{margin-top:clamp(10px,2.4vh,26px);background:none;border:0;padding:6px 4px;font:300 clamp(.95rem,1.2vw,1.1rem)/1 var(--sans);color:var(--champ);cursor:pointer;text-decoration:underline;text-underline-offset:7px;text-decoration-thickness:1px}
 
 .opener.opening .seal::before{animation:none;opacity:0}
 .opener.opening .seal .l{transform:translate(-42px,90px) rotate(-38deg);opacity:0}
@@ -133,9 +151,12 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   box-shadow:inset 0 3px 7px rgba(110,75,25,.5), inset 0 -2px 4px rgba(255,248,225,.5), 0 1px 0 rgba(255,248,225,.5);
 }
 .wax::after{content:"";position:absolute;inset:20%;border-radius:50%;border:1px solid rgba(120,85,35,.35)}
-.mono{position:relative;z-index:1;font:italic 400 1.9em/1 var(--serif);color:#7a5726;text-shadow:0 1px 0 rgba(255,248,225,.7),0 -1px 0 rgba(90,60,20,.35);letter-spacing:-.03em}
-.seal .mono{font-size:calc(var(--seal) * .3)}
-.mono i{font-size:.5em;padding-inline:.02em}
+.mono{
+  position:relative;z-index:1;font:italic 700 1.9em/1 var(--serif);color:#4f340f;letter-spacing:.01em;white-space:nowrap;
+  text-shadow:0 1.5px 0 rgba(255,246,215,.85),0 -1px 1px rgba(60,35,5,.45);
+}
+.seal .mono{font-size:calc(var(--seal) * .27)}
+.mono i{font:italic 500 .62em/1 var(--serif);padding-inline:.06em;vertical-align:.12em}
 
 /* ========= Portada ========= */
 .hero{
@@ -158,10 +179,11 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   grid-template-areas:"eyebrow" "names" "civil" "photo" "facts";
 }
 .hero-civil{
-  grid-area:civil;display:flex;align-items:center;gap:12px;margin-top:clamp(12px,2svh,24px);
-  font:italic 400 clamp(1.15rem,1.8vw,1.6rem)/1 var(--serif);color:var(--burdeos);letter-spacing:.02em;
+  grid-area:civil;display:flex;align-items:center;gap:clamp(12px,1.6vw,20px);margin-top:clamp(14px,2.4svh,30px);
+  font:italic 500 clamp(2rem,min(9vw,5.4svh),3.6rem)/1.1 var(--serif);color:var(--burdeos);
+  letter-spacing:.01em;white-space:nowrap;
 }
-.hero-civil i{width:7px;height:7px;border:1px solid var(--oro);transform:rotate(45deg)}
+.hero-civil i{flex:none;width:9px;height:9px;border:1px solid var(--oro);transform:rotate(45deg)}
 .hero-eyebrow{grid-area:eyebrow;display:flex;align-items:center;gap:14px}
 .hero-eyebrow::before,.hero-eyebrow::after{content:"";width:clamp(28px,4vw,56px);height:1px;background:var(--champ)}
 .hero-names{
@@ -183,8 +205,8 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .js-bloom .flor{opacity:0;scale:.8;transition:opacity 1.4s ease var(--d,0s), scale 2s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
 .js-bloom .flor.in{opacity:var(--op,1);scale:1;animation:sway 9s ease-in-out calc(var(--d,0s) + 2s) infinite alternate}
 @keyframes sway{from{rotate:-1.6deg}to{rotate:1.6deg}}
-.hero,.quote,.gifts,.gallery,.closing{overflow:hidden;overflow:clip}
-.hero-in,.gifts .wrap,.gallery .wrap,.gallery-grid,.closing .wrap{position:relative;z-index:1}
+.hero,.quote,.gifts,.rsvp,.closing{overflow:hidden;overflow:clip}
+.hero-in,.gifts .wrap,.rsvp .wrap,.closing .wrap{position:relative;z-index:1}
 
 .f-hero-ramo{width:80%;right:-30%;bottom:-10%;z-index:2;--o:70% 95%}
 .f-hero-peonia{width:62%;left:-24%;top:-4%;z-index:2;--o:30% 30%}
@@ -201,8 +223,8 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .f-gift-ramo{width:clamp(260px,32vw,520px);left:-6%;bottom:-6%;transform:scaleX(-1);--o:30% 95%}
 .f-gift-hojas{width:clamp(110px,20vw,300px);right:2%;top:-1%;--op:.9}
 
-.f-gal-hojas{width:clamp(110px,17vw,280px);left:1%;top:0;transform:scaleX(-1)}
-.f-gal-rama{width:clamp(70px,10vw,170px);right:3%;top:2%;transform:rotate(-20deg)}
+.f-rsvp-hojas{width:clamp(110px,17vw,280px);left:1%;top:0;transform:scaleX(-1)}
+.f-rsvp-rama{width:clamp(70px,10vw,170px);right:3%;bottom:4%;transform:rotate(-20deg)}
 
 .f-close-l,.f-close-r{width:clamp(170px,26vw,440px);bottom:-8%;--o:50% 95%}
 .f-close-l{left:-5%;transform:scaleX(-1)}
@@ -215,8 +237,10 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 }
 .hero-facts div{display:grid;gap:8px;align-content:start;padding:clamp(10px,1.8svh,16px) 8px}
 .hero-facts div+div{border-left:1px solid rgba(169,131,79,.3)}
-.hero-facts dt{font:500 clamp(.58rem,.8vw,.7rem)/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--oro)}
-.hero-facts dd{margin:0;font:400 clamp(.95rem,1.4vw,1.3rem)/1.25 var(--serif);color:var(--burdeos)}
+.hero-facts{max-width:640px}
+.hero-facts dt{font:400 clamp(1.35rem,2vw,1.75rem)/1 var(--script);color:var(--oro)}
+.hero-facts dd{margin:0;font:600 clamp(1.05rem,1.6vw,1.4rem)/1.2 var(--num);color:var(--burdeos);font-variant-numeric:lining-nums}
+.hero-facts dd small{display:block;margin-top:3px;font:italic 500 .82em/1.2 var(--num);color:var(--oro)}
 @media (min-width:960px){
   .hero-in{
     grid-template-columns:1.05fr .95fr;column-gap:clamp(40px,6vw,110px);align-content:center;
@@ -248,14 +272,24 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   max-width:1320px;margin-inline:auto;padding-inline:clamp(20px,6vw,100px);
   display:grid;gap:clamp(40px,7vw,110px);align-items:center;
 }
-.quote-photo{width:100%;aspect-ratio:3/4}
+/* Marco vino en forma de ventana arqueada */
+.qframe{
+  position:relative;padding:clamp(10px,1.3vw,16px);
+  border-radius:50% 50% 14px 14px / 36% 36% 14px 14px;
+  background:linear-gradient(160deg,#8e1f3d 0%,var(--burdeos) 40%,var(--vino) 100%);
+  box-shadow:0 26px 50px -22px rgba(77,0,17,.6), inset 0 1px 0 rgba(255,255,255,.12);
+}
+.qframe::after{
+  content:"";position:absolute;inset:clamp(4px,.6vw,7px);pointer-events:none;
+  border:1px solid rgba(219,190,155,.75);border-radius:inherit;
+}
+.quote-photo{width:100%;aspect-ratio:3/4;border-radius:50% 50% 6px 6px / 37.5% 37.5% 6px 6px}
 .orn-line{display:flex;align-items:center;gap:12px}
 .orn-line i{width:clamp(40px,4vw,56px);height:1px;background:var(--champ)}
 .orn-line b{width:10px;height:10px;border:1px solid var(--champ);transform:rotate(45deg)}
 .quote-lead{margin-top:clamp(26px,4vw,44px);font:italic 400 clamp(1.6rem,2.9vw,2.6rem)/1.25 var(--serif);color:var(--vino);text-wrap:balance}
 .quote blockquote{margin:0}
 .quote blockquote p{max-width:44ch;font:italic 400 clamp(1.1rem,1.5vw,1.35rem)/1.55 var(--serif);color:var(--tinta);text-wrap:pretty}
-.quote cite{display:block;margin-top:clamp(18px,2.4vw,26px);font:400 clamp(.7rem,.95vw,.85rem)/1 var(--sans);font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:#9a4a5c}
 .quote hr{border:0;height:1px;background:rgba(169,131,79,.45);margin:clamp(30px,4.5vw,50px) 0 clamp(26px,3.5vw,40px)}
 @media (min-width:900px){
   .quote-in{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
@@ -268,15 +302,15 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .count-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 40px}
 .count .h2{font-size:clamp(2.8rem,7vw,6.2rem);margin-top:clamp(14px,2vw,26px);color:var(--crema)}
 .count-date{
-  padding-bottom:clamp(6px,1.2vw,16px);font:300 clamp(1rem,1.6vw,1.5rem)/1.3 var(--sans);color:var(--champ);
+  padding-bottom:clamp(6px,1.2vw,16px);font:italic 500 clamp(1.2rem,1.9vw,1.7rem)/1.3 var(--num);color:var(--champ);font-variant-numeric:lining-nums;
   text-decoration:underline dotted;text-decoration-thickness:2px;text-underline-offset:10px;
 }
 .count-date:hover{color:var(--crema)}
 .timer{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(36px,5vw,70px);border-block:1px solid rgba(219,190,155,.3)}
 .timer div{display:grid;justify-items:center;gap:clamp(10px,2vw,24px);padding:clamp(24px,4vw,54px) 4px}
 .timer div+div{border-left:1px solid rgba(219,190,155,.3)}
-.timer b{font:400 clamp(2.7rem,10.5vw,10rem)/.9 var(--serif);color:var(--crema);font-variant-numeric:tabular-nums lining-nums}
-.timer span{font:400 clamp(.58rem,1.1vw,1rem)/1 var(--sans);letter-spacing:.3em;padding-left:.3em;text-transform:uppercase;color:var(--champ)}
+.timer b{font:500 clamp(3rem,11.5vw,10.5rem)/.9 var(--num);color:var(--crema);font-variant-numeric:tabular-nums lining-nums;text-shadow:0 4px 24px rgba(0,0,0,.25)}
+.timer span{font:400 clamp(1.15rem,2.2vw,2rem)/1 var(--script);color:var(--champ)}
 .timer-done{margin-top:40px;text-align:center;font:400 clamp(2.6rem,8vw,5rem)/1.1 var(--script);color:var(--champ)}
 
 /* ========= Franja de foto ========= */
@@ -288,9 +322,12 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   box-shadow:0 0 0 1px var(--champ) inset,0 0 0 6px #FBF6E4 inset,0 0 0 7px rgba(219,190,155,.7) inset,0 22px 40px -24px rgba(77,0,17,.35);
 }
 .ticket .eyebrow{color:var(--burdeos)}
-.time{display:flex;justify-content:center;align-items:baseline;gap:10px;margin-top:22px;font:400 clamp(3.6rem,17vw,5.2rem)/1 var(--serif);color:var(--burdeos);font-variant-numeric:lining-nums}
-.time small{font:500 .8rem/1 var(--sans);letter-spacing:.2em;color:var(--oro)}
-.place{margin-top:22px;font:italic 400 1.5rem/1.25 var(--serif);color:var(--vino)}
+.ticket > .eyebrow{font:italic 500 clamp(1.15rem,1.8vw,1.4rem)/1.3 var(--num);letter-spacing:.02em;text-transform:none;font-variant-numeric:lining-nums}
+.time{display:grid;justify-items:center;gap:6px;margin-top:18px}
+.time b{font:600 clamp(4.2rem,18vw,6.2rem)/.95 var(--num);color:var(--burdeos);font-variant-numeric:lining-nums;letter-spacing:.02em}
+.time small{font:400 clamp(1.9rem,6vw,2.5rem)/1 var(--script);color:var(--oro)}
+.place{margin-top:22px;font:italic 600 clamp(1.5rem,4vw,1.9rem)/1.25 var(--serif);color:var(--vino)}
+.address{margin-top:8px;font:300 clamp(1.05rem,1.4vw,1.2rem)/1.4 var(--sans);color:var(--tinta)}
 .city{margin-top:6px;font:400 .78rem/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--oro)}
 .rule{width:56px;height:1px;background:var(--champ);margin:24px auto}
 .day{font:400 .95rem/1.5 var(--sans)}
@@ -313,42 +350,38 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   border:1px solid rgba(219,190,155,.45);outline:1px solid rgba(219,190,155,.18);outline-offset:-8px;background:rgba(0,0,0,.14);
 }
 .yape-label{font:500 clamp(.72rem,1vw,.85rem)/1 var(--sans);letter-spacing:.34em;padding-left:.34em;text-transform:uppercase;color:var(--champ)}
-.yape-num{margin-top:6px;font:400 clamp(2rem,7vw,3rem)/1.1 var(--serif);color:var(--crema);font-variant-numeric:lining-nums;white-space:nowrap}
+.yape-num{margin-top:10px;font:600 clamp(2.3rem,9vw,3.6rem)/1.1 var(--num);letter-spacing:.06em;color:var(--crema);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
 .yape-name{font:300 clamp(1rem,1.3vw,1.15rem)/1.4 var(--sans);color:rgba(248,241,214,.8)}
 .copy{margin-top:16px;background:none;border:1px solid rgba(219,190,155,.6);color:var(--champ);border-radius:999px;padding:12px 24px;font:500 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
 .copy:hover{background:var(--champ);color:var(--vino)}
 
-/* ========= Galería ========= */
-.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:40px;padding-inline:16px;max-width:1240px;margin-inline:auto}
-.gallery-grid .ph{aspect-ratio:3/4;cursor:default;border:0;padding:0;width:100%;transition:filter .4s,transform .4s}
-.gallery-grid .ph.loaded{cursor:zoom-in}
-.gallery-grid .ph.loaded:hover{filter:brightness(1.06)}
-.gallery-grid .ph:nth-child(even){transform:translateY(28px)}
-.gallery-grid{padding-bottom:28px}
-@media (min-width:860px){
-  .gallery-grid{grid-template-columns:repeat(5,1fr);gap:16px;padding-bottom:48px}
-  .gallery-grid .ph:nth-child(even){transform:translateY(48px)}
-}
 /* Recorte para ocultar el ícono de audio de WhatsApp (esquina inferior derecha) */
 .ph.crop.loaded{background-size:118% auto;background-position:0 0}
 .arch.loaded{background-position:center 35%}
 .band.loaded{background-position:center 62%}
-.lightbox{border:0;padding:0;background:transparent;max-width:94vw;max-height:90vh}
-.lightbox::backdrop{background:rgba(44,0,9,.9)}
-.lightbox img{max-height:86vh;width:auto;margin:auto}
-.lightbox button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:14px;width:44px;height:44px;border-radius:50%;border:1px solid var(--champ);background:var(--vino);color:var(--champ);font-size:1.4rem;cursor:pointer}
+
+/* ========= Confirmar asistencia ========= */
+.rsvp{background:var(--grain),#F1E5C5}
+.rsvp .h2{font-weight:600;font-size:clamp(2.8rem,8vw,5rem);color:var(--burdeos)}
+.btn.wa{margin-top:34px;min-height:58px;padding:0 34px;font-size:.9rem;box-shadow:0 14px 30px -14px rgba(77,0,17,.6)}
+.btn.wa svg{width:22px;height:22px}
 
 /* ========= Cierre ========= */
 .closing{text-align:center}
 .closing .wax{position:relative;width:92px;height:92px;margin:0 auto}
-.closing .mono{font-size:2rem}
+.closing .wax{width:112px;height:112px}
+.closing .mono{font-size:1.9rem}
 .closing .names{color:var(--champ);text-shadow:none;margin-top:26px;font-size:clamp(3rem,14vw,5rem)}
 .closing .names .amp{color:var(--blush)}
 .closing .wrap{display:grid;justify-items:center}
 .closing .names{justify-content:center}
 .closing .lead{margin:22px auto 0;max-width:30ch;text-align:center;text-wrap:balance;color:rgba(248,241,214,.85)}
-.punctual{max-width:32ch;margin:14px auto 0;font:italic 400 clamp(.95rem,1.2vw,1.1rem)/1.5 var(--serif);color:var(--oro)}
-.sign{margin-top:28px;font:400 .78rem/1 var(--sans);letter-spacing:.34em;color:var(--champ)}
+.punctual{
+  max-width:34ch;margin:20px auto 0;padding:12px 18px;
+  font:italic 500 clamp(1.1rem,1.5vw,1.3rem)/1.45 var(--serif);color:var(--burdeos);
+  border-block:1px solid rgba(123,24,48,.35);background:rgba(123,24,48,.05);text-wrap:balance;
+}
+.sign{margin-top:28px;font:500 clamp(1.1rem,1.6vw,1.35rem)/1 var(--num);letter-spacing:.3em;padding-left:.3em;color:var(--champ);font-variant-numeric:lining-nums}
 
 /* ========= Música ========= */
 .music{
@@ -356,12 +389,11 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   width:48px;height:48px;border-radius:50%;border:1px solid var(--champ);background:var(--vino);color:var(--champ);
   display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 20px rgba(77,0,17,.35);
 }
-.music svg{width:20px;height:20px}
-.music .bars{display:flex;gap:2px;align-items:flex-end;height:16px}
-.music .bars i{width:3px;background:currentColor;animation:eq 1s ease-in-out infinite}
-.music .bars i:nth-child(2){animation-delay:-.4s}.music .bars i:nth-child(3){animation-delay:-.7s}
-.music.paused .bars i{animation:none;height:4px}
-@keyframes eq{0%,100%{height:4px}50%{height:16px}}
+.music svg{width:22px;height:22px}
+.music .off,.music.paused .on{display:none}
+.music.paused .off{display:block}
+.music:not(.paused) .wave{animation:wave 1.4s ease-in-out infinite}
+@keyframes wave{0%,100%{opacity:1}50%{opacity:.35}}
 
 #petals{position:fixed;inset:0;z-index:45;pointer-events:none}
 
@@ -406,9 +438,12 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
     <span class="half l"><span class="wax"><span class="mono">K<i>&amp;</i>H</span></span></span>
     <span class="half r"><span class="wax"><span class="mono">K<i>&amp;</i>H</span></span></span>
   </button>
+  <button class="op-hint" id="hint" aria-label="Abrir la invitación">
+    <span>Toca el sello para abrir</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </button>
   <div class="op-bottom">
-    <p class="op-names">Karin <i>&amp;</i> Hitler</p>
-    <p class="op-hint">Toca el sello para abrir</p>
+    <p class="op-names">Karin <i>&amp;</i> Hither</p>
     <button class="linkbtn" id="noMusic">Abrir sin música</button>
   </div>
 </div>
@@ -420,7 +455,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   <img class="flor f-hero-rama" src="img/flores/rama-dorada.png" alt="" style="--d:.9s">
   <div class="hero-in">
     <p class="eyebrow hero-eyebrow">Nos casamos</p>
-    <h1 class="hero-names"><span>Karin</span><span class="amp">&amp;</span><span>Hitler</span></h1>
+    <h1 class="hero-names"><span>Karin</span><span class="amp">&amp;</span><span>Hither</span></h1>
     <p class="hero-civil"><i></i>Matrimonio civil<i></i></p>
     <div class="hero-photo">
       <div class="arch-wrap">
@@ -432,8 +467,8 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
     <p class="lead">Con la bendición de Dios y el cariño de nuestras familias, tenemos el honor de invitarte a nuestro matrimonio civil, el día en que unimos nuestras vidas.</p>
     <dl class="hero-facts">
       <div><dt>Fecha</dt><dd>Sábado 24.10.26</dd></div>
-      <div><dt>Hora</dt><dd>12:00 p. m.</dd></div>
-      <div><dt>Lugar</dt><dd>Mankora, Andahuaylas</dd></div>
+      <div><dt>Hora</dt><dd>12:00<small>Mediodía</small></dd></div>
+      <div><dt>Lugar</dt><dd>Salón de eventos Makora<small>Andahuaylas</small></dd></div>
     </dl>
   </div>
 </header>
@@ -442,7 +477,9 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 <section class="quote">
   <div class="quote-in">
     <div class="quote-media">
-      <div class="ph quote-photo crop reveal" data-img="img/detalle.jpg" data-title="Foto 2 · Detalle" data-desc="Primer plano de sus manos entrelazadas mostrando el anillo de compromiso." data-fmt="Vertical 3:4 · img/detalle.jpg"></div>
+      <div class="qframe reveal">
+        <div class="ph quote-photo crop" data-img="img/detalle.jpg" data-title="Foto 2 · Detalle" data-desc="Primer plano de sus manos entrelazadas mostrando el anillo de compromiso." data-fmt="Vertical 3:4 · img/detalle.jpg"></div>
+      </div>
       <img class="flor f-quote-peonia" src="img/flores/peonia-burdeos.png" alt="" loading="lazy">
       <img class="flor f-quote-hojas" src="img/flores/hojas-oro.png" alt="" loading="lazy" style="--d:.4s">
     </div>
@@ -452,7 +489,6 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
       <hr>
       <blockquote>
         <p>“El amor no consiste en mirarse el uno al otro, sino en mirar juntos en la misma dirección.”</p>
-        <cite>Antoine de Saint-Exupéry</cite>
       </blockquote>
     </div>
   </div>
@@ -466,7 +502,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
         <p class="eyebrow">Falta muy poco</p>
         <h2 class="h2">Para decir que sí</h2>
       </div>
-      <a class="count-date cal-link" href="#" target="_blank" rel="noopener">Sábado 24 de octubre · 12:00 p. m.</a>
+      <a class="count-date cal-link" href="#" target="_blank" rel="noopener">Sábado 24 de octubre · 12:00 (mediodía)</a>
     </div>
     <div class="timer" id="timer">
       <div><b id="d">00</b><span>Días</span></div>
@@ -491,13 +527,14 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
     <img class="flor f-ticket-peonia" src="img/flores/peonia-burdeos.png" alt="" loading="lazy">
     <img class="flor f-ticket-rama" src="img/flores/rama-dorada.png" alt="" loading="lazy" style="--d:.4s">
     <p class="eyebrow">Sábado 24 de octubre de 2026</p>
-    <p class="time">12:00 <small>P. M.</small></p>
+    <p class="time"><b>12:00</b><small>Mediodía</small></p>
     <p class="punctual">Agradecemos su puntualidad para cumplir con el protocolo del evento.</p>
     <div class="rule"></div>
-    <p class="place">Salón de eventos Mankora</p>
+    <p class="place">Salón de eventos Makora</p>
+    <p class="address">Av. Santa Cruz 535</p>
     <p class="city">Andahuaylas · Apurímac</p>
     <div class="actions">
-      <a class="btn" id="mapLink" href="https://www.google.com/maps/search/?api=1&amp;query=Sal%C3%B3n%20de%20eventos%20Mankora%20Andahuaylas" target="_blank" rel="noopener">
+      <a class="btn" id="mapLink" href="https://www.google.com/maps/search/?api=1&amp;query=Sal%C3%B3n%20de%20eventos%20Makora%2C%20Av.%20Santa%20Cruz%20535%2C%20Andahuaylas" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
         Cómo llegar
       </a>
@@ -526,25 +563,18 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   </div>
 </section>
 
-<!-- ============ GALERÍA ============ -->
-<section class="center gallery">
-  <img class="flor f-gal-hojas" src="img/flores/hojas-oro.png" alt="" loading="lazy">
-  <img class="flor f-gal-rama" src="img/flores/rama-dorada.png" alt="" loading="lazy" style="--d:.3s">
+<!-- ============ CONFIRMAR ASISTENCIA ============ -->
+<section class="center rsvp">
+  <img class="flor f-rsvp-hojas" src="img/flores/hojas-oro.png" alt="" loading="lazy">
+  <img class="flor f-rsvp-rama" src="img/flores/rama-dorada.png" alt="" loading="lazy" style="--d:.3s">
   <div class="wrap reveal">
-    <p class="eyebrow">Nuestra historia</p>
-    <h2 class="h2">Retratos de nuestro amor</h2>
-  </div>
-  <div class="gallery-grid">
-    <button class="ph crop" aria-label="Ver foto 1" data-img="img/galeria-1.jpg" data-title="Foto 4" data-desc="Retrato de la pareja." data-fmt="Vertical 3:4 · img/galeria-1.jpg"></button>
-    <button class="ph" aria-label="Ver foto 2" data-img="img/galeria-2.jpg" data-title="Foto 5" data-desc="Retrato de la pareja." data-fmt="Vertical 3:4 · img/galeria-2.jpg"></button>
-    <button class="ph crop" aria-label="Ver foto 3" data-img="img/galeria-3.jpg" data-title="Foto 6" data-desc="Retrato de la pareja." data-fmt="Vertical 3:4 · img/galeria-3.jpg"></button>
-    <button class="ph" aria-label="Ver foto 4" data-img="img/galeria-4.jpg" data-title="Foto 7" data-desc="Retrato de la pareja." data-fmt="Vertical 3:4 · img/galeria-4.jpg"></button>
-    <button class="ph" aria-label="Ver foto 5" data-img="img/galeria-5.jpg" data-title="Foto 8" data-desc="Retrato de la pareja." data-fmt="Vertical 3:4 · img/galeria-5.jpg"></button>
-    <button class="ph" aria-label="Ver foto 6" data-img="img/galeria-6.jpg" data-title="Foto 9" data-desc="Retrato de la pareja." data-fmt="Vertical 3:4 · img/galeria-6.jpg"></button>
-    <button class="ph crop" aria-label="Ver foto 7" data-img="img/galeria-7.jpg" data-title="Foto 10" data-desc="Retrato de la pareja." data-fmt="Vertical 3:4 · img/galeria-7.jpg"></button>
-    <button class="ph" aria-label="Ver foto 8" data-img="img/galeria-8.jpg" data-title="Foto 11" data-desc="Retrato de la pareja." data-fmt="Vertical 3:4 · img/galeria-8.jpg"></button>
-    <button class="ph" aria-label="Ver foto 9" data-img="img/galeria-9.jpg" data-title="Foto 12" data-desc="Retrato de la pareja." data-fmt="Vertical 3:4 · img/galeria-9.jpg"></button>
-    <button class="ph" aria-label="Ver foto 10" data-img="img/galeria-10.jpg" data-title="Foto 13" data-desc="Retrato de la pareja." data-fmt="Vertical 3:4 · img/galeria-10.jpg"></button>
+    <p class="eyebrow">Confirma tu asistencia</p>
+    <h2 class="h2">¿Nos acompañas?</h2>
+    <p class="lead">Nos hará muy felices contar contigo. Confírmanos tu asistencia por WhatsApp.</p>
+    <a class="btn wa" id="rsvpLink" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+      Confirmar asistencia
+    </a>
   </div>
 </section>
 
@@ -554,7 +584,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   <img class="flor f-close-r" src="img/flores/ramo-peonias.png" alt="" loading="lazy" style="--d:.3s">
   <div class="wrap reveal">
     <span class="wax"><span class="mono">K<i>&amp;</i>H</span></span>
-    <p class="names"><span>Karin</span><span class="amp">&amp;</span><span>Hitler</span></p>
+    <p class="names"><span>Karin</span><span class="amp">&amp;</span><span>Hither</span></p>
     <p class="lead">Gracias por ser parte de nuestra historia. Te esperamos para celebrar juntos este nuevo comienzo.</p>
     <p class="sign">24 · 10 · 2026</p>
   </div>
@@ -562,21 +592,18 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 </main>
 
 <button class="music paused" id="music" aria-label="Pausar o reproducir música" hidden>
-  <span class="bars"><i></i><i></i><i></i></span>
+  <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path class="wave" d="M15.5 9a4.2 4.2 0 0 1 0 6"/><path class="wave" d="M18.3 6.3a8 8 0 0 1 0 11.4"/></svg>
+  <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>
 </button>
 <audio id="audio" src="musica/cancion.mp3" preload="metadata" loop></audio>
-
-<dialog class="lightbox" id="lightbox">
-  <button id="lbClose" aria-label="Cerrar">&times;</button>
-  <img id="lbImg" alt="">
-</dialog>
 
 <canvas id="petals" hidden></canvas>
 
 <script>
 /* ===================== DATOS EDITABLES ===================== */
 const CONFIG = {
-  fecha: "2026-10-24T12:00:00-05:00"        // hora de Perú
+  fecha: "2026-10-24T12:00:00-05:00",       // hora de Perú
+  whatsapp: "51983954488"                   // número que recibe las confirmaciones (51 + celular, sin espacios)
 };
 /* =========================================================== */
 
@@ -624,6 +651,7 @@ function openInvite(withMusic){
   setTimeout(() => { opener.hidden = true; }, reduce ? 100 : 2900);
 }
 $("#seal").addEventListener("click", () => openInvite(true));
+$("#hint").addEventListener("click", () => openInvite(true));
 $("#noMusic").addEventListener("click", () => openInvite(false));
 audio.addEventListener("error", () => { musicBtn.hidden = true; });
 musicBtn.addEventListener("click", () => {
@@ -647,9 +675,9 @@ tick(); setInterval(tick, 1000);
 
 /* Agendar en Google Calendar */
 const calUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE"
-  + "&text=" + encodeURIComponent("Boda civil de Karin & Hitler")
+  + "&text=" + encodeURIComponent("Boda civil de Karin & Hither")
   + "&dates=20261024T170000Z/20261025T000000Z"
-  + "&location=" + encodeURIComponent("Salón de eventos Mankora, Andahuaylas, Apurímac")
+  + "&location=" + encodeURIComponent("Salón de eventos Makora, Av. Santa Cruz 535, Andahuaylas, Apurímac")
   + "&details=" + encodeURIComponent("¡Te esperamos para celebrar nuestra boda! Agradecemos su puntualidad para cumplir con el protocolo del evento.");
 document.querySelectorAll(".cal-link").forEach(a => a.href = calUrl);
 
@@ -661,14 +689,10 @@ $("#copyYape").addEventListener("click", e => {
   if (navigator.clipboard) navigator.clipboard.writeText(b.dataset.num).then(done, fallback); else fallback();
 });
 
-/* Galería ampliada */
-const lb = $("#lightbox");
-document.querySelectorAll(".gallery-grid .ph").forEach(el => el.addEventListener("click", () => {
-  if (!el.classList.contains("loaded") || !lb.showModal) return;
-  $("#lbImg").src = el.dataset.img; lb.showModal();
-}));
-$("#lbClose").addEventListener("click", () => lb.close());
-lb.addEventListener("click", e => { if (e.target === lb) lb.close(); });
+/* Confirmar asistencia por WhatsApp */
+$("#rsvpLink").href = `https://wa.me/${CONFIG.whatsapp}?text=` + encodeURIComponent(
+  "¡Hola Karin y Hither! Confirmo mi asistencia a su matrimonio civil el sábado 24 de octubre a las 12:00 (mediodía) en el Salón de eventos Makora. ¡Nos vemos!"
+);
 
 /* Pétalos de rosa cayendo durante toda la invitación */
 function petals(){
