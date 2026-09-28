@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Karin & Hither</title>
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-<meta name="description" content="Matrimonio civil · Sábado 24 de octubre de 2026, 12:00 p. m. (mediodía) · Salón de eventos Makora, Av. Santa Cruz 535, Andahuaylas">
+<meta name="description" content="Matrimonio civil · Sábado 24 de octubre de 2026, 12:00 PM (Mediodía) · Salón de eventos Makora, Av. Santa Cruz 535, Andahuaylas">
 <meta property="og:title" content="Karin & Hither · 24.10.26">
 <meta property="og:description" content="Tenemos el honor de invitarte a celebrar nuestra boda.">
 <meta property="og:image" content="img/portada.jpg">
@@ -32,6 +32,7 @@
   --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.05 0 0 0 0 0.1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{
   margin:0;background:var(--crema) var(--grain);color:var(--tinta);
@@ -246,12 +247,13 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 
 /* Guía para deslizar */
 .scroll-cue{
-  position:absolute;z-index:3;left:50%;bottom:clamp(14px,2.4svh,26px);translate:-50% 0;
-  display:grid;justify-items:center;gap:4px;transition:opacity .6s,visibility .6s;
+  position:fixed;z-index:30;left:50%;bottom:calc(clamp(12px,2.2svh,24px) + env(safe-area-inset-bottom,0px));translate:-50% 0;
+  display:grid;justify-items:center;gap:4px;padding:8px 22px 0;transition:opacity .6s,visibility .6s;
+  background:radial-gradient(closest-side,rgba(248,241,214,.85),rgba(248,241,214,0));
 }
 .scroll-cue.hide{opacity:0;visibility:hidden}
 .scroll-cue p{font:400 clamp(1.5rem,2.4vw,1.9rem)/1 var(--script);color:var(--burdeos)}
-.cue-line{position:relative;width:1px;height:clamp(22px,4svh,40px);background:rgba(169,131,79,.55);overflow:hidden}
+.cue-line{position:relative;width:1px;height:clamp(18px,3svh,32px);background:rgba(169,131,79,.55);overflow:hidden}
 .cue-line::after{content:"";position:absolute;left:-1.5px;top:-6px;width:4px;height:6px;border-radius:2px;background:var(--oro);animation:drip 1.8s ease-in infinite}
 @keyframes drip{0%{top:-6px;opacity:0}20%{opacity:1}100%{top:100%;opacity:.2}}
 .cue-btn{
@@ -491,7 +493,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
     <p class="lead">Con la bendición de Dios y el cariño de nuestras familias, tenemos el honor de invitarte a nuestro matrimonio civil, el día en que unimos nuestras vidas.</p>
     <dl class="hero-facts">
       <div><dt>Fecha</dt><dd>24 de octubre<small>Sábado · 2026</small></dd></div>
-      <div><dt>Hora</dt><dd>12:00 p. m.<small>Mediodía</small></dd></div>
+      <div><dt>Hora</dt><dd>12:00 PM<small>(Mediodía)</small></dd></div>
       <div><dt>Lugar</dt><dd>Salón de eventos Makora<small>Andahuaylas</small></dd></div>
     </dl>
   </div>
@@ -533,7 +535,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
         <p class="eyebrow">Falta muy poco</p>
         <h2 class="h2">Para decir que sí</h2>
       </div>
-      <a class="count-date cal-link" href="#" target="_blank" rel="noopener">Sábado 24 de octubre · 12:00 p. m. (mediodía)</a>
+      <a class="count-date cal-link" href="#" target="_blank" rel="noopener">Sábado 24 de octubre · 12:00 PM (Mediodía)</a>
     </div>
     <div class="timer" id="timer">
       <div><b id="d">00</b><span>Días</span></div>
@@ -558,20 +560,16 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
     <img class="flor f-ticket-peonia" src="img/flores/peonia-burdeos.png" alt="" loading="lazy">
     <img class="flor f-ticket-rama" src="img/flores/rama-dorada.png" alt="" loading="lazy" style="--d:.4s">
     <p class="eyebrow">Sábado 24 de octubre de 2026</p>
-    <p class="time"><b>12:00 <em>p. m.</em></b><small>Mediodía</small></p>
+    <p class="time"><b>12:00 <em>PM</em></b><small>(Mediodía)</small></p>
     <p class="punctual">Agradecemos su puntualidad para cumplir con el protocolo del evento.</p>
     <div class="rule"></div>
     <p class="place">Salón de eventos Makora</p>
     <p class="address">Av. Santa Cruz 535</p>
     <p class="city">Andahuaylas · Apurímac</p>
     <div class="actions">
-      <a class="btn" id="mapLink" href="https://www.google.com/maps/search/?api=1&amp;query=Sal%C3%B3n%20de%20eventos%20Makora%2C%20Av.%20Santa%20Cruz%20535%2C%20Andahuaylas" target="_blank" rel="noopener">
+      <a class="btn" id="mapLink" href="https://www.google.com/maps/place/RECREO+M%C3%81NKORA/@-13.6661866,-73.4290181,2954m/data=!3m1!1e3!4m10!1m2!2m1!1sSal%C3%B3n+de+eventos+Makora,+Av.+Santa+Cruz+535,+Andahuaylas!3m6!1s0x916d2bac65a2703d:0x5406b458e4217e3!8m2!3d-13.6661866!4d-73.4109937!15sCjlTYWzDs24gZGUgZXZlbnRvcyBNYWtvcmEsIEF2LiBTYW50YSBDcnV6IDUzNSwgQW5kYWh1YXlsYXNaOCI2c2Fsw7NuIGRlIGV2ZW50b3MgbWFrb3JhIGF2IHNhbnRhIGNydXogNTM1IGFuZGFodWF5bGFzkgEKcmVzdGF1cmFudOABAA!16s%2Fg%2F1ptyb0f_6?entry=ttu&amp;g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
         Cómo llegar
-      </a>
-      <a class="btn ghost cal-link" href="#" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
-        Agendar
       </a>
     </div>
   </div>
@@ -678,6 +676,7 @@ function openInvite(withMusic){
     musicBtn.hidden = !audioOk;
     startBloom();
     petals();
+    cue.hidden = false;
   }, reduce ? 50 : 1700);
   setTimeout(() => { opener.hidden = true; }, reduce ? 100 : 2900);
 }
@@ -688,6 +687,7 @@ $("#hint").addEventListener("click", () => openInvite(true));
 const cue = $("#scrollCue");
 $("#cueBtn").addEventListener("click", () => $(".quote").scrollIntoView({behavior: reduce ? "auto" : "smooth"}));
 addEventListener("scroll", () => cue.classList.toggle("hide", scrollY > 60), {passive: true});
+cue.hidden = true;   // aparece recién al abrir el sobre
 $("#noMusic").addEventListener("click", () => openInvite(false));
 audio.addEventListener("error", () => { musicBtn.hidden = true; });
 musicBtn.addEventListener("click", () => {
@@ -727,7 +727,7 @@ $("#copyYape").addEventListener("click", e => {
 
 /* Confirmar asistencia por WhatsApp */
 $("#rsvpLink").href = `https://wa.me/${CONFIG.whatsapp}?text=` + encodeURIComponent(
-  "¡Hola Karin y Hither! Confirmo mi asistencia a su matrimonio civil el sábado 24 de octubre a las 12:00 p. m. (mediodía) en el Salón de eventos Makora. ¡Nos vemos!"
+  "¡Hola Karin y Hither! Confirmo mi asistencia a su matrimonio civil el sábado 24 de octubre a las 12:00 PM (Mediodía) en el Salón de eventos Makora. ¡Nos vemos!"
 );
 
 /* Pétalos de rosa cayendo durante toda la invitación */
