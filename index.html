@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Karin & Hither</title>
-<meta name="description" content="Matrimonio civil · Sábado 24 de octubre de 2026, 12:00 (mediodía) · Salón de eventos Makora, Av. Santa Cruz 535, Andahuaylas">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="description" content="Matrimonio civil · Sábado 24 de octubre de 2026, 12:00 p. m. (mediodía) · Salón de eventos Makora, Av. Santa Cruz 535, Andahuaylas">
 <meta property="og:title" content="Karin & Hither · 24.10.26">
 <meta property="og:description" content="Tenemos el honor de invitarte a celebrar nuestra boda.">
 <meta property="og:image" content="img/portada.jpg">
@@ -174,7 +175,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .hero-in{
   position:relative;z-index:1;max-width:1320px;margin-inline:auto;
   min-height:100vh;min-height:100svh;
-  padding:clamp(40px,7svh,110px) clamp(30px,6vw,100px);
+  padding:clamp(40px,7svh,110px) clamp(30px,6vw,100px) clamp(130px,17svh,160px);
   display:grid;justify-items:center;align-content:center;text-align:center;
   grid-template-areas:"eyebrow" "names" "civil" "photo" "facts";
 }
@@ -195,7 +196,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .hero-names .amp{font:italic 400 .42em/1 var(--serif);color:var(--oro);margin-block:.05em}
 .hero-photo{
   grid-area:photo;position:relative;margin-top:clamp(20px,3.5svh,44px);
-  width:clamp(170px,calc((100svh - 470px) * .8),min(62vw,440px));
+  width:clamp(160px,calc((100svh - 620px) * .8),min(62vw,440px));
 }
 .arch-wrap{position:relative}
 .arch{position:relative;width:100%;aspect-ratio:4/5;border-radius:50% 50% 0 0 / 40% 40% 0 0}
@@ -237,10 +238,30 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 }
 .hero-facts div{display:grid;gap:8px;align-content:start;padding:clamp(10px,1.8svh,16px) 8px}
 .hero-facts div+div{border-left:1px solid rgba(169,131,79,.3)}
-.hero-facts{max-width:640px}
-.hero-facts dt{font:400 clamp(1.35rem,2vw,1.75rem)/1 var(--script);color:var(--oro)}
-.hero-facts dd{margin:0;font:600 clamp(1.05rem,1.6vw,1.4rem)/1.2 var(--num);color:var(--burdeos);font-variant-numeric:lining-nums}
-.hero-facts dd small{display:block;margin-top:3px;font:italic 500 .82em/1.2 var(--num);color:var(--oro)}
+.hero-facts{max-width:680px;border-block-color:rgba(123,24,48,.35)}
+.hero-facts div+div{border-left-color:rgba(123,24,48,.25)}
+.hero-facts dt{font:500 clamp(.74rem,1vw,.88rem)/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--burdeos)}
+.hero-facts dd{margin:0;font:600 clamp(1.2rem,2vw,1.65rem)/1.2 var(--serif);color:var(--vino);font-variant-numeric:lining-nums}
+.hero-facts dd small{display:block;margin-top:5px;font:500 clamp(.82rem,1.1vw,.98rem)/1.25 var(--sans);letter-spacing:.04em;color:var(--burdeos)}
+
+/* Guía para deslizar */
+.scroll-cue{
+  position:absolute;z-index:3;left:50%;bottom:clamp(14px,2.4svh,26px);translate:-50% 0;
+  display:grid;justify-items:center;gap:4px;transition:opacity .6s,visibility .6s;
+}
+.scroll-cue.hide{opacity:0;visibility:hidden}
+.scroll-cue p{font:400 clamp(1.5rem,2.4vw,1.9rem)/1 var(--script);color:var(--burdeos)}
+.cue-line{position:relative;width:1px;height:clamp(22px,4svh,40px);background:rgba(169,131,79,.55);overflow:hidden}
+.cue-line::after{content:"";position:absolute;left:-1.5px;top:-6px;width:4px;height:6px;border-radius:2px;background:var(--oro);animation:drip 1.8s ease-in infinite}
+@keyframes drip{0%{top:-6px;opacity:0}20%{opacity:1}100%{top:100%;opacity:.2}}
+.cue-btn{
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;cursor:pointer;
+  background:var(--vino);color:var(--champ);border:1px solid var(--champ);
+  box-shadow:0 10px 22px -10px rgba(77,0,17,.7);animation:cuepulse 2.4s ease-out infinite;
+}
+.cue-btn svg{width:20px;height:20px}
+.cue-btn:hover{background:var(--burdeos)}
+@keyframes cuepulse{0%{box-shadow:0 0 0 0 rgba(123,24,48,.45),0 10px 22px -10px rgba(77,0,17,.7)}100%{box-shadow:0 0 0 14px rgba(123,24,48,0),0 10px 22px -10px rgba(77,0,17,.7)}}
 @media (min-width:960px){
   .hero-in{
     grid-template-columns:1.05fr .95fr;column-gap:clamp(40px,6vw,110px);align-content:center;
@@ -254,7 +275,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   .hero-names span:last-child{transform:translateX(.9em)}
   .hero-names .amp{padding-left:1.1em}
   .hero-civil i:first-child{display:none}
-  .hero-photo{grid-row:1 / span 5;align-self:center;justify-self:end;margin-top:0;width:clamp(260px,calc((100svh - 150px) * .8),440px)}
+  .hero-photo{grid-row:1 / span 5;align-self:center;justify-self:end;margin-top:0;width:clamp(260px,calc((100svh - 260px) * .8),440px)}
   .hero-facts{align-self:start}
   .hero-facts div:first-child{padding-left:0}
 }
@@ -310,7 +331,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .timer div{display:grid;justify-items:center;gap:clamp(10px,2vw,24px);padding:clamp(24px,4vw,54px) 4px}
 .timer div+div{border-left:1px solid rgba(219,190,155,.3)}
 .timer b{font:500 clamp(3rem,11.5vw,10.5rem)/.9 var(--num);color:var(--crema);font-variant-numeric:tabular-nums lining-nums;text-shadow:0 4px 24px rgba(0,0,0,.25)}
-.timer span{font:400 clamp(1.15rem,2.2vw,2rem)/1 var(--script);color:var(--champ)}
+.timer span{font:500 clamp(.72rem,1.2vw,1.05rem)/1 var(--sans);letter-spacing:.22em;padding-left:.22em;text-transform:uppercase;color:var(--champ)}
 .timer-done{margin-top:40px;text-align:center;font:400 clamp(2.6rem,8vw,5rem)/1.1 var(--script);color:var(--champ)}
 
 /* ========= Franja de foto ========= */
@@ -325,6 +346,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
 .ticket > .eyebrow{font:italic 500 clamp(1.15rem,1.8vw,1.4rem)/1.3 var(--num);letter-spacing:.02em;text-transform:none;font-variant-numeric:lining-nums}
 .time{display:grid;justify-items:center;gap:6px;margin-top:18px}
 .time b{font:600 clamp(4.2rem,18vw,6.2rem)/.95 var(--num);color:var(--burdeos);font-variant-numeric:lining-nums;letter-spacing:.02em}
+.time b em{font:600 .36em/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--burdeos);vertical-align:.9em}
 .time small{font:400 clamp(1.9rem,6vw,2.5rem)/1 var(--script);color:var(--oro)}
 .place{margin-top:22px;font:italic 600 clamp(1.5rem,4vw,1.9rem)/1.25 var(--serif);color:var(--vino)}
 .address{margin-top:8px;font:300 clamp(1.05rem,1.4vw,1.2rem)/1.4 var(--sans);color:var(--tinta)}
@@ -349,9 +371,11 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
   display:grid;justify-items:center;gap:10px;text-align:center;
   border:1px solid rgba(219,190,155,.45);outline:1px solid rgba(219,190,155,.18);outline-offset:-8px;background:rgba(0,0,0,.14);
 }
-.yape-label{font:500 clamp(.72rem,1vw,.85rem)/1 var(--sans);letter-spacing:.34em;padding-left:.34em;text-transform:uppercase;color:var(--champ)}
-.yape-num{margin-top:10px;font:600 clamp(2.3rem,9vw,3.6rem)/1.1 var(--num);letter-spacing:.06em;color:var(--crema);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+.yape-label{font:600 clamp(1.4rem,3.4vw,2rem)/1 var(--sans);letter-spacing:.3em;padding-left:.3em;text-transform:uppercase;color:var(--champ)}
+.yape-num{margin-top:12px;font:600 clamp(2.9rem,12vw,4.8rem)/1.05 var(--num);letter-spacing:.05em;color:var(--crema);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
 .yape-name{font:300 clamp(1rem,1.3vw,1.15rem)/1.4 var(--sans);color:rgba(248,241,214,.8)}
+/* Evita que el celular convierta números en enlaces azules subrayados */
+.yape-num a,.yape-num a:visited,a[href^="tel:"],a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font:inherit!important;pointer-events:none}
 .copy{margin-top:16px;background:none;border:1px solid rgba(219,190,155,.6);color:var(--champ);border-radius:999px;padding:12px 24px;font:500 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
 .copy:hover{background:var(--champ);color:var(--vino)}
 
@@ -466,10 +490,17 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
     </div>
     <p class="lead">Con la bendición de Dios y el cariño de nuestras familias, tenemos el honor de invitarte a nuestro matrimonio civil, el día en que unimos nuestras vidas.</p>
     <dl class="hero-facts">
-      <div><dt>Fecha</dt><dd>Sábado 24.10.26</dd></div>
-      <div><dt>Hora</dt><dd>12:00<small>Mediodía</small></dd></div>
+      <div><dt>Fecha</dt><dd>24 de octubre<small>Sábado · 2026</small></dd></div>
+      <div><dt>Hora</dt><dd>12:00 p. m.<small>Mediodía</small></dd></div>
       <div><dt>Lugar</dt><dd>Salón de eventos Makora<small>Andahuaylas</small></dd></div>
     </dl>
+  </div>
+  <div class="scroll-cue" id="scrollCue">
+    <p>Desliza</p>
+    <span class="cue-line" aria-hidden="true"></span>
+    <button class="cue-btn" id="cueBtn" aria-label="Ir a la siguiente sección">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+    </button>
   </div>
 </header>
 
@@ -502,7 +533,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
         <p class="eyebrow">Falta muy poco</p>
         <h2 class="h2">Para decir que sí</h2>
       </div>
-      <a class="count-date cal-link" href="#" target="_blank" rel="noopener">Sábado 24 de octubre · 12:00 (mediodía)</a>
+      <a class="count-date cal-link" href="#" target="_blank" rel="noopener">Sábado 24 de octubre · 12:00 p. m. (mediodía)</a>
     </div>
     <div class="timer" id="timer">
       <div><b id="d">00</b><span>Días</span></div>
@@ -527,7 +558,7 @@ section,header,footer{padding-block:clamp(80px,12vw,150px);position:relative}
     <img class="flor f-ticket-peonia" src="img/flores/peonia-burdeos.png" alt="" loading="lazy">
     <img class="flor f-ticket-rama" src="img/flores/rama-dorada.png" alt="" loading="lazy" style="--d:.4s">
     <p class="eyebrow">Sábado 24 de octubre de 2026</p>
-    <p class="time"><b>12:00</b><small>Mediodía</small></p>
+    <p class="time"><b>12:00 <em>p. m.</em></b><small>Mediodía</small></p>
     <p class="punctual">Agradecemos su puntualidad para cumplir con el protocolo del evento.</p>
     <div class="rule"></div>
     <p class="place">Salón de eventos Makora</p>
@@ -652,6 +683,11 @@ function openInvite(withMusic){
 }
 $("#seal").addEventListener("click", () => openInvite(true));
 $("#hint").addEventListener("click", () => openInvite(true));
+
+/* Guía "Desliza": lleva a la siguiente sección y se oculta al deslizar */
+const cue = $("#scrollCue");
+$("#cueBtn").addEventListener("click", () => $(".quote").scrollIntoView({behavior: reduce ? "auto" : "smooth"}));
+addEventListener("scroll", () => cue.classList.toggle("hide", scrollY > 60), {passive: true});
 $("#noMusic").addEventListener("click", () => openInvite(false));
 audio.addEventListener("error", () => { musicBtn.hidden = true; });
 musicBtn.addEventListener("click", () => {
@@ -691,7 +727,7 @@ $("#copyYape").addEventListener("click", e => {
 
 /* Confirmar asistencia por WhatsApp */
 $("#rsvpLink").href = `https://wa.me/${CONFIG.whatsapp}?text=` + encodeURIComponent(
-  "¡Hola Karin y Hither! Confirmo mi asistencia a su matrimonio civil el sábado 24 de octubre a las 12:00 (mediodía) en el Salón de eventos Makora. ¡Nos vemos!"
+  "¡Hola Karin y Hither! Confirmo mi asistencia a su matrimonio civil el sábado 24 de octubre a las 12:00 p. m. (mediodía) en el Salón de eventos Makora. ¡Nos vemos!"
 );
 
 /* Pétalos de rosa cayendo durante toda la invitación */
